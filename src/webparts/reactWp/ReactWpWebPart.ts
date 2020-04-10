@@ -11,7 +11,7 @@ import {
 import * as strings from 'ReactWpWebPartStrings';
 import ReactWp from './components/ReactWp';
 import { IReactWpProps } from './components/IReactWpProps';
-
+import { MSGraphClient } from '@microsoft/sp-http';
 
 export interface IReactWpWebPartProps {
   description: string;
@@ -25,6 +25,7 @@ export default class ReactWpWebPart extends BaseClientSideWebPart<IReactWpWebPar
       {
         description: this.properties.description,
         weburl:this.context.pageContext.web.absoluteUrl,
+        context:this.context
       }
     );
 

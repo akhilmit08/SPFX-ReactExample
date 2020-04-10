@@ -1,8 +1,4 @@
 export interface IReactWpState {
-    items:[
-        {
-        "Title":"",
-        "ID":"",
-    }
-];
+   
+addTrainer:number[];
 }
